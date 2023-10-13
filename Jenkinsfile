@@ -4,7 +4,7 @@ pipeline {
     stage("checkout"){
       // Change the credentialsID appropriately
       steps {
-         git branch: 'main', changelog: false, credentialsId: 'GitlabCred', poll: false, url: 'https://gitlab.com/wezvaprojects/ansible/ha-pipeline.git'
+         git branch: 'main', changelog: false, credentialsId: 'github', poll: false, url: 'https://gitlab.com/wezvaprojects/ansible/ha-pipeline.git'
       }
     }
     stage("Execute Playbook"){
